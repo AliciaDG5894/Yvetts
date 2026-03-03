@@ -4,6 +4,50 @@
 
 $(document).ready(function () {
 
+    let savedProducts = JSON.parse(localStorage.getItem("products")) || [];
+
+    savedProducts.forEach(function(product) {
+
+        var newProductHTML = `
+        <div class="col-lg-4 col-md-6 shop-product-col">
+            <div class="product__item">
+                <div class="product__item__pic set-bg" data-setbg="${product.img}">
+                    <div class="label new">Nuevo</div>
+                    <ul class="product__hover">
+                        <li><a href="${product.img}" class="image-popup">
+                            <span class="arrow_expand"></span>
+                        </a></li>
+                        <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                        <li><a href="#"><span class="icon_bag_alt"></span></a></li>
+                    </ul>
+                </div>
+                <div class="product__item__text">
+                    <h6><a href="#">${product.name}</a></h6>
+                    <div class="rating">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <div class="product__price">$ ${product.price}</div>
+                </div>
+            </div>
+        </div>`;
+
+        if ($('.property__gallery').length) {
+            $('.property__gallery').prepend(newProductHTML);
+        } else {
+            $('.shop .col-lg-9 .row').prepend(newProductHTML);
+        }
+
+        $('.set-bg').each(function () {
+            var bg = $(this).data('setbg');
+            if (bg) {
+                $(this).css('background-image', 'url(' + bg + ')');
+            }
+        });
+
+    });
+
     /* ============================================
        1. MODO OSCURO CON BOTÓN
     ============================================ */
@@ -141,7 +185,21 @@ $(document).ready(function () {
 
             if (!valid) return;
 
+            // 
             var priceFloat = parseFloat(price).toFixed(1);
+
+            let savedProducts = JSON.parse(localStorage.getItem("products")) || [];
+
+            savedProducts.push({
+                name: name,
+                price: priceFloat,
+                cat: cat,
+                img: img
+            });
+
+            localStorage.setItem("products", JSON.stringify(savedProducts));
+            // 
+
             var newProductHTML = `
             <div class="col-lg-3 col-md-4 col-sm-6 mix ${cat} shop-product-col" style="display:none">
                 <div class="product__item">
@@ -179,6 +237,11 @@ $(document).ready(function () {
             $newProduct.find('.product__item__text').append($newDesc).append($newBtn);
 
             $newProduct.slideDown(400);
+
+            $newProduct.find('.set-bg').each(function () {
+                var bg = $(this).data('setbg');
+                $(this).css('background-image', 'url(' + bg + ')');
+            });
 
             // Reiniciar Magnific Popup si está disponible
             try {
