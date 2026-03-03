@@ -2,6 +2,15 @@
    FEATURES.CSS - Nuevas Funcionalidades
    ======================================== */
 
+/* eliminar btn */
+.delete-product span {
+    color: #ff4d4d;
+}
+
+.delete-product:hover span {
+    color: #cc0000;
+}
+
 /* --- BOTÓN MODO OSCURO --- */
 #dark-mode-btn {
     position: fixed;
