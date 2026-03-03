@@ -19,6 +19,7 @@ $(document).ready(function () {
                         </a></li>
                         <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                         <li><a href="#"><span class="icon_bag_alt"></span></a></li>
+                        <li><a href="#" class="delete-product" data-name="${product.name}"><span class="fa fa-trash"></span></a></li>
                     </ul>
                 </div>
                 <div class="product__item__text">
@@ -255,6 +256,32 @@ $(document).ready(function () {
             $('#new-product-img').val('');
         });
     }
+
+    // BTN PARA ELIMINAR 
+    $(document).on('click', '.delete-product', function (e) {
+
+        e.preventDefault();
+
+        var productName = $(this).data('name');
+
+        // Confirmación opcional
+        if (!confirm("¿Eliminar este producto?")) return;
+
+        // Eliminar visualmente
+        $(this).closest('.col-lg-4').fadeOut(300, function () {
+            $(this).remove();
+        });
+
+        // Actualizar localStorage
+        let savedProducts = JSON.parse(localStorage.getItem("products")) || [];
+
+        savedProducts = savedProducts.filter(function(product) {
+            return product.name !== productName;
+        });
+
+        localStorage.setItem("products", JSON.stringify(savedProducts));
+
+    });
 
 
     /* ============================================
