@@ -88,6 +88,21 @@ body.dark-mode .header {
 body.dark-mode .header__menu ul li a { color: #ddd !important; }
 body.dark-mode .header__menu ul li.active a,
 body.dark-mode .header__menu ul li a:hover { color: #7d5041 !important; }
+
+body.dark-mode .header__right__widget li span {
+    color: #e0e0e0;
+}
+body.dark-mode .header__right__widget li span:hover {
+    color: #ffffff;
+}
+body.dark-mode .header__right {
+    color: #e0e0e0;
+}
+body.dark-mode .header__right__widget li .tip {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
 body.dark-mode .footer { background: #1a1a1a !important; }
 body.dark-mode .footer p, body.dark-mode .footer h6, body.dark-mode .footer ul li a { color: #ccc !important; }
 body.dark-mode .product__item {
@@ -100,15 +115,46 @@ body.dark-mode .product__price { color: #ffffff !important; }
 body.dark-mode .section-title h4 { color: #fff !important; }
 body.dark-mode .filter__controls li { color: #ccc !important; }
 body.dark-mode .filter__controls li.active { color: #7d5041 !important; border-color: #8e3c20 !important; }
-body.dark-mode .trend__content { background: #1e1e1e; padding: 15px; border-radius: 6px; }
+body.dark-mode .trend__content { background: #121212;}
 body.dark-mode .trend__item__text h6 { color: #eee !important; }
 body.dark-mode .services__item { background: #121212 !important; }
 body.dark-mode .services__item h6 { color: #fff !important; }
 body.dark-mode .services__item p { color: #aaa !important; }
 body.dark-mode .discount__text { background: #1a1a1a; }
 body.dark-mode .discount__text__title h2, body.dark-mode .discount__text__title span { color: #7d5041 !important; }
-body.dark-mode .shop__sidebar { background: #1e1e1e; padding: 15px; border-radius: 6px; }
-body.dark-mode .shop__sidebar .section-title h4 { color: #7d5041 !important; }
+body.dark-mode .discount__text .countdown__item span{ color: #ffffff; }
+body.dark-mode .discount__text a{ color: #ffffff; }
+
+body.dark-mode .shop__sidebar { background: #121212 !important; }
+body.dark-mode .shop__sidebar .section-title h4 { color: #ffffff !important; }
+body.dark-mode .shop__sidebar .card { background: #121212 !important; }
+body.dark-mode .shop__sidebar .price-input p { color: #ffffff !important; }
+body.dark-mode .shop__sidebar .price-input input { background: #1e1e1e !important; color: #ffffff !important; }
+body.dark-mode .shop__sidebar a { color: #ffffff !important; }
+body.dark-mode .shop__sidebar label { color: #ffffff !important; }
+body.dark-mode .pagination__option a{ background: #1e1e1e !important; color: #ffffff !important; }
+
+body.dark-mode .comparison-section { background: #121212 !important; }
+
+body.dark-mode .shop__cart__table th { color: #ffffff !important; }
+body.dark-mode .cart__product__item__title h6 { color: #ffffff !important; }
+
+body.dark-mode .cart__price { color: #ffffff !important; }
+body.dark-mode .cart__quantity input { background: #121212 !important; color: #ffffff !important; }
+body.dark-mode .cart__total{ color: #ffffff !important; }
+body.dark-mode .icon_close{ background: #1e1e1e !important; color: #ffffff !important; }
+body.dark-mode .cart__btn a{ background: #1e1e1e !important; color: #ffffff !important; }
+body.dark-mode .discount__content h6{ color: #ffffff !important; }
+body.dark-mode .discount__content input{ background: #1e1e1e !important; }
+body.dark-mode .cart__total__procced { background: #1e1e1e !important; }
+body.dark-mode .cart__total__procced h6 { color: #ffffff !important; }
+body.dark-mode .cart__total__procced li { color: #ffffff !important; }
+
+body.dark-mode .section-title{ color: #f1e9e9 !important;  font-size: 100px;}
+body.dark-mode .section-subtitle{ color: #efe3e3 !important; }
+body.dark-mode .container p{ color: #efe3e3 !important; }
+body.dark-mode .contact__address h6 { color: #efe3e3 !important; }
+
 body.dark-mode .contact__content { background: #1e1e1e; padding: 20px; border-radius: 6px; }
 body.dark-mode .contact__content h5 { color: #7d5041 !important; }
 body.dark-mode .contact__content input,
@@ -117,7 +163,7 @@ body.dark-mode .contact__content textarea {
     color: #eee !important;
     border: 1px solid #444 !important;
 }
-body.dark-mode .breadcrumb-option { background: #1a1a1a !important; }
+body.dark-mode .breadcrumb-option { background: #121212 !important; }
 body.dark-mode .breadcrumb__links a, body.dark-mode .breadcrumb__links span { color: #ccc !important; }
 body.dark-mode .categories__text h1, body.dark-mode .categories__text p { color: #fff !important; }
 body.dark-mode .accordion .card { background: #2a2a2a; border-color: #444; }
