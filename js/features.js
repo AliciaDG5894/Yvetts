@@ -313,8 +313,8 @@ $(document).ready(function () {
             $nameInput.add($emailInput).add($msgInput).removeClass('field-error');
             $('#contact-success').hide();
 
-            if (!name || name.length < 2) {
-                $('#err-contact-name').text('Por favor ingresa tu nombre completo (mínimo 2 caracteres).');
+            if (!name || name.length < 5) {
+                $('#err-contact-name').text('Por favor ingresa tu nombre (mínimo 5 caracteres).');
                 $nameInput.addClass('field-error');
                 valid = false;
             }
