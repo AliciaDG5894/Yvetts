@@ -2,6 +2,48 @@
    FEATURES.CSS - Nuevas Funcionalidades
    ======================================== */
 
+/* =========================
+   MODO OSCURO - MENÚ MOBILE
+========================= */
+
+body.dark-mode .slicknav_menu {
+    background: #111 !important;
+}
+
+body.dark-mode .slicknav_nav {
+    background: #111 !important;
+}
+
+body.dark-mode .slicknav_nav a {
+    color: #fff !important;
+}
+
+body.dark-mode .slicknav_btn {
+    background: #111 !important;
+}
+
+/* =========================
+   MODO OSCURO - OFFCANVAS
+========================= */
+
+body.dark-mode .offcanvas-menu-wrapper {
+    background: #111 !important;
+}
+
+body.dark-mode .offcanvas__logo,
+body.dark-mode .offcanvas__auth,
+body.dark-mode .offcanvas__widget {
+    background: transparent !important;
+}
+
+body.dark-mode .offcanvas__auth a {
+    color: #fff !important;
+}
+
+body.dark-mode .offcanvas__widget span {
+    color: #fff !important;
+}
+
 /* eliminar btn */
 .delete-product span {
     color: #ff4d4d;
